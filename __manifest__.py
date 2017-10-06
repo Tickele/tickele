@@ -6,6 +6,7 @@
     'description': """
         Modulo para integrar Tickele con Odoo.
 		Con Tickele podras enviar a tus usuarios los tickets y facturas sin necesidad de imprimilos. Ademas, tambien podras enviar promociones especiales para fidelizarlos.
+		Para mas información visita https://tickele.com/
     """,
 	'sequence': 6,
     'author': "Tickele",
@@ -16,6 +17,9 @@
     # for the full list
     'category': 'Tools',
     'version': '0.1',
+	
+	'images': ['images/main-screenshot.png'],
+	
 
     # any module necessary for this one to work correctly
     'depends': ['point_of_sale'],
