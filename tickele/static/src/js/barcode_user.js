@@ -1051,14 +1051,22 @@ var ClientListScreenWidget = ScreenWidget.extend({
 						//console.log("XHR: " + user[0].nif);
 						//console.log("Status: " + JSON.stringify(user[0]));
 						
-						$('.client-name').val(user[0].businessname);
-						$('.client-address-street').val(user[0].address);
-						$('.client-address-city').val(user[0].city);
-						$('.client-address-zip').val(user[0].cp);
-						$('.client-email').val(user[0].email);
-						$('.client-phone').val(user[0].phone);
-						$('.barcode').val(tickele_code);
-						$('.vat').val(user[0].nif);
+						try{
+							$('.client-name').val(user[0].businessname);
+							$('.client-address-street').val(user[0].address);
+							$('.client-address-city').val(user[0].city);
+							$('.client-address-zip').val(user[0].cp);
+							$('.client-email').val(user[0].email);
+							$('.client-phone').val(user[0].phone);
+							$('.barcode').val(tickele_code);
+							$('.vat').val(user[0].nif);
+						}catch(err){
+							self.gui.show_popup('error',{
+								'title': _t('Error: Ha ocurrido un error con el usuario'),
+								'body': _t('Comprueba que el usuario existe o ha rellenado sus datos.'),
+							});
+						}
+						
 				}
 				});
 			}

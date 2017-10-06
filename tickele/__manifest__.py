@@ -26,7 +26,7 @@
 
     # always loaded
     'data': [
-		'views/tickele_test.xml',
+		'views/tickele.xml',
     ],
 	'installable': True,
     'auto_install': False,
