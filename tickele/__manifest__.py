@@ -17,6 +17,9 @@
     # for the full list
     'category': 'Tools',
     'version': '0.1',
+	
+	'images': ['images/main-screenshot.png'],
+	
 
     # any module necessary for this one to work correctly
     'depends': ['point_of_sale'],
